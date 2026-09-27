@@ -1,0 +1,428 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffe7a8,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #d8c7ff,
+            transparent 35%
+        ),
+        #f5f5f5;
+
+    color: #222;
+}
+
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.header h1 {
+    font-size: 52px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+
+.header p {
+    margin-top: 8px;
+    color: #666;
+    font-size: 19px;
+}
+
+
+.comic-form,
+.result {
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.95
+    );
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.12);
+
+    border: 2px solid #222;
+}
+
+
+label {
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+
+    font-weight: 800;
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: white;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #222;
+
+}
+
+
+textarea {
+
+    height: 140px;
+
+    resize: vertical;
+
+}
+
+
+button {
+
+    width: 100%;
+
+    margin-top: 28px;
+
+    padding: 16px;
+
+    border: 3px solid #222;
+
+    border-radius: 12px;
+
+    background: #ffd43b;
+
+    color: #111;
+
+    font-size: 19px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow: 5px 5px 0 #222;
+
+    transition: 0.15s;
+
+}
+
+
+button:hover {
+
+    transform:
+        translate(2px, 2px);
+
+    box-shadow:
+        3px 3px 0 #222;
+
+}
+
+
+.result h2 {
+
+    margin-top: 0;
+
+    font-size: 28px;
+
+}
+
+
+.comic-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+
+    margin-top: 25px;
+
+}
+
+
+.comic-panel {
+
+    background: white;
+
+    border: 3px solid #222;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    box-shadow:
+        5px 5px 0 #222;
+
+}
+
+
+.panel-number {
+
+    display: inline-block;
+
+    background: #ffd43b;
+
+    border: 2px solid #222;
+
+    border-radius: 8px;
+
+    padding: 6px 10px;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+}
+
+
+.comic-panel h3 {
+
+    font-size: 22px;
+
+    margin: 15px 0;
+
+}
+
+
+.comic-image {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 2px solid #222;
+
+    margin-top: 15px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.scene-box,
+.narration-box,
+.dialogue-box {
+
+    margin-top: 14px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+}
+
+
+.scene-box {
+
+    background: #f1f1f1;
+
+}
+
+
+.narration-box {
+
+    background: #fff8d8;
+
+}
+
+
+.dialogue-box {
+
+    background: #e9f5ff;
+
+}
+
+
+.scene-box span,
+.narration-box span,
+.dialogue-box span {
+
+    font-weight: 900;
+
+    font-size: 13px;
+
+}
+
+
+.comic-panel p {
+
+    margin: 7px 0 0;
+
+    line-height: 1.5;
+
+}
+
+
+.result-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.download-btn,
+.new-btn {
+
+    flex: 1;
+
+    min-width: 220px;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    border: 2px solid #222;
+
+}
+
+
+.download-btn {
+
+    background: #222;
+
+    color: white;
+
+}
+
+
+.new-btn {
+
+    background: #ffd43b;
+
+    color: #222;
+
+}
+
+
+.download-btn:hover,
+.new-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+pre {
+
+    white-space: pre-wrap;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.7;
+
+}
+
+
+@media (max-width: 700px) {
+
+    .container {
+
+        width: 94%;
+
+        margin: 20px auto;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .comic-form,
+    .result {
+
+        padding: 22px;
+
+    }
+
+
+    .comic-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .result-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .download-btn,
+    .new-btn {
+
+        width: 100%;
+
+    }
+
+}

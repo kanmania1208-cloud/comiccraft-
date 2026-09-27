@@ -1,0 +1,153 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ComicCraft - AI Comic Creator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>
+                🎨 ComicCraft
+            </h1>
+
+            <p>
+                AI Comic Story Creator
+            </p>
+
+        </div>
+
+
+        <form
+            action="/generate"
+            method="post"
+            class="comic-form"
+        >
+
+            <label>
+                Story Prompt
+            </label>
+
+            <textarea
+                name="prompt"
+                placeholder="Example: A brave fox exploring an enchanted forest..."
+                required
+            ></textarea>
+
+
+            <label>
+                Main Character
+            </label>
+
+            <input
+                type="text"
+                name="character"
+                placeholder="Example: Leo the Fox"
+                required
+            >
+
+
+            <label>
+                Setting
+            </label>
+
+            <input
+                type="text"
+                name="setting"
+                placeholder="Example: Enchanted Forest"
+                required
+            >
+
+
+            <label>
+                Tone
+            </label>
+
+            <select name="tone">
+
+                <option value="funny">
+                    Funny
+                </option>
+
+                <option value="dramatic">
+                    Dramatic
+                </option>
+
+                <option value="adventure">
+                    Adventure
+                </option>
+
+                <option value="mystery">
+                    Mystery
+                </option>
+
+                <option value="fantasy">
+                    Fantasy
+                </option>
+
+            </select>
+
+
+            <label>
+                Art Style
+            </label>
+
+            <select name="art_style">
+
+                <option value="comic book">
+                    Comic Book
+                </option>
+
+                <option value="anime">
+                    Anime
+                </option>
+
+                <option value="cartoon">
+                    Cartoon
+                </option>
+
+                <option value="manga">
+                    Manga
+                </option>
+
+                <option value="watercolor">
+                    Watercolor
+                </option>
+
+            </select>
+
+
+            <button type="submit">
+                ✨ Generate Comic
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+```
